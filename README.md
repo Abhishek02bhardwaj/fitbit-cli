@@ -1,6 +1,6 @@
-# Fitbit CLI Tool
+# pyFitbit
 
-This repository contains a CLI tool for managing Fitbit OAuth tokens and extracting intraday heart rate data. The tool provides an easy way to authenticate with Fitbit, refresh tokens, and retrieve detailed heart rate data for specified dates or date ranges. Ideal for developers and data analysts working with Fitbit data, this tool streamlines the process of accessing and managing Fitbit health data programmatically.
+pyFitbit is a CLI tool for managing Fitbit OAuth tokens and extracting intraday heart rate data. The tool provides an easy way to authenticate with Fitbit, refresh tokens, and retrieve detailed heart rate data for specified dates or date ranges. Ideal for developers and data analysts working with Fitbit data, this tool streamlines the process of accessing and managing Fitbit health data programmatically.
 
 ## Features
 
@@ -13,8 +13,8 @@ This repository contains a CLI tool for managing Fitbit OAuth tokens and extract
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/your-username/fitbit-cli.git
-    cd fitbit-cli
+    git clone https://github.com/your-username/pyfitbit.git
+    cd pyfitbit
     ```
 
 2. Install the required dependencies:
@@ -53,7 +53,7 @@ Create a `config.json` file with your Fitbit app credentials and API settings. H
 To authenticate and get the authorization token for a Fitbit email:
 
 ```sh
-fitbit token -auth fitbit_email@example.com
+pyfitbit token -auth fitbit_email@example.com
 ```
 
 #### Refresh Tokens
@@ -61,7 +61,7 @@ fitbit token -auth fitbit_email@example.com
 To refresh the tokens for a Fitbit email:
 
 ```sh
-fitbit token -refresh fitbit_email@example.com
+pyfitbit token -refresh fitbit_email@example.com
 ```
 
 ### 2. Data Extraction
@@ -69,13 +69,13 @@ fitbit token -refresh fitbit_email@example.com
 #### Extract intraday heart rate data for a specific date:
 
 ```sh
-fitbit extract intraday-heart-rate date fitbit_email@example.com
+pyfitbit extract intraday-heart-rate date fitbit_email@example.com
 ```
 
 To extract intraday heart rate data for a date range:
 
 ```sh
-fitbit extract intraday-heart-rate start_date end_date fitbit_email@example.com
+pyfitbit extract intraday-heart-rate start_date end_date fitbit_email@example.com
 ```
 
 ## Code Overview
@@ -103,16 +103,16 @@ fitbit extract intraday-heart-rate start_date end_date fitbit_email@example.com
 
 ```sh
 # Authenticate and get tokens
-fitbit token -auth example@example.com
+pyfitbit token -auth example@example.com
 
 # Refresh tokens
-fitbit token -refresh example@example.com
+pyfitbit token -refresh example@example.com
 
 # Extract intraday heart rate data for a single date
-fitbit extract intraday-heart-rate 2023-07-01 example@example.com
+pyfitbit extract intraday-heart-rate 2023-07-01 example@example.com
 
 # Extract intraday heart rate data for a date range
-fitbit extract intraday-heart-rate 2023-07-01 2023-07-07 example@example.com
+pyfitbit extract intraday-heart-rate 2023-07-01 2023-07-07 example@example.com
 ```
 
 ## License
